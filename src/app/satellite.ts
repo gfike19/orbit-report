@@ -12,4 +12,14 @@ constructor(name: string, type: string, launchDate: string, orbitType: string, o
     this.orbitType = orbitType;
     this.operational = operational;
 }
+
+public shouldShowWarning () {
+    let tempType: String = this.type.toLocaleLowerCase();
+
+    if(tempType.includes('Space Debris'.toLocaleLowerCase())) {
+        return true;
+    } else {
+        return false;
+    }
+}
 }
